@@ -1,0 +1,16 @@
+unordered_map<char,int>m;
+	    for(int i=0;i<str.length();i++){
+	        m[str[i]]++;
+	    }
+	    
+	    string ans="";
+	    
+	    for(int i=0;i<str.size();i++){
+	        char ch=str[i];
+	        if(m[ch]>0){
+	            ans+=ch;
+	            m.erase(ch);
+	        }
+	    }
+	    
+	    return ans;
